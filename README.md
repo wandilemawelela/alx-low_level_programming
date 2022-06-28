@@ -1,2 +1,1 @@
-# alx-low_level_programming
-alx-low_level_programming
+This repository contains low-level programming tasks completed during my Software Engineering program at ALX.
