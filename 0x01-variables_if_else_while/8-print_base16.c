@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 /**
   * main - Entry point
@@ -11,12 +12,12 @@ int main(void)
 	int numbers;
 	char letters;
 
-	for (numbers = 0; numbers <= 9; numbers++)
+	for (numbers = 0; numbers < 10; numbers++)
 	{
-		putchar(numbers);
+		putchar((numbers % 10) + '0');
 	}
 
-	for (letters = 'a'; letters <= 'z'; letters++)
+	for (letters = 'a'; letters <= 'f'; letters++)
 	{
 		putchar(letters);
 	}
