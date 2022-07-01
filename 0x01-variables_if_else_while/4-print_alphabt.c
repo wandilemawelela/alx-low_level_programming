@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <unistd.h>
 #include <stdio.h>
 
 /**
@@ -9,12 +9,17 @@
   */
 int main(void)
 {
-	int ch = 'a';
+	int ch;
 
-	while (ch <= 'z')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(ch);
-		ch++;
+		if (ch != 'e' && ch != 'q')
+		{
+			putchar(ch);
+		} else
+		{
+
+		}
 	}
 	putchar('\n');
 	return (0);
