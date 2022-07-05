@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 /**
-  * main Prints the sum of all multiples of 3 or 5 up to 102
-  * Return: 0
+  * main - Prints the sum of all multiples of 3 or 5 up to 102
+  * Description - Prints the sum of all the multiples of 3 or 5 below 1024
+  * (excluded), followed by a new line.
+  * Return: Alwayd (Success)
+  *
   */
 
 int main(void)
