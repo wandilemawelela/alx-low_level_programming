@@ -2,8 +2,8 @@
 
 /**
   * times_table - Prints the 9 times table, starting with 0.
+  * Description - Prints the 9 times table, starting with 0.
   * Return: 0
-  * @n: Integer
   */
 
 void times_table(void)
