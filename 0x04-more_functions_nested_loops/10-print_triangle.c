@@ -2,7 +2,8 @@
 
 /**
   * print_triangle - prints a triangle, followed by a new line.
-  *
+  * @size: Interger
+  * Return: 0
   */
 
 void print_triangle(int size)
