@@ -1,1 +1,1 @@
-This repository contains low-level programming tasks completed during my Software Engineering program at ALX.
+This repository contains low-level programming tasks completed during my Software Engineering program at ALX - Holberton.
