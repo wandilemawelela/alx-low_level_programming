@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
   * *_strcat - concatenates two strings.
   * Return: pointer to the resulting string
