@@ -9,35 +9,20 @@
 
 char *cap_string(char *str)
 {
-	int i;
+	char spc[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	int len = 13;
+	int a = 0, i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[a])
 	{
-		/* Check if first char is lowercase */
-		if (i == 0)
+		i = 0;
+		while (i < len)
 		{
-			if ((str[i] >= 'a' && str[i] <= 'z'))
-			{
-				str[i] = str[i] - 32; /* Make it capital letter by subtracting 32*/
-				continue;
-			}
+			if ((a == 0 || str[a - 1] == spc[i]) && (str[a] >= 97 && str[a] <= 122))
+				str[a] = str[a] - 32;
+			i++;
 		}
-		if (str[i] == ' ') /* Checks for space*/
-		{
-			++i; /*Move to next char*/
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 32;
-				continue;
-			}
-		} else
-		{
-			/* Make all other uppercase chars to be lowercase */
-			if (str[i] >= 'A' && str[i] <= 'Z')
-			{
-				str[i] = str[i] + 32;
-			}
-	}
+		a++;
 	}
 	return (str);
 }
