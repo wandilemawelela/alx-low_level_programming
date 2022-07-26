@@ -18,19 +18,21 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	while (s1[1])
+	while (s1[i])
 		i++;
 	while (s2[j])
 		j++;
 
 	k = i + j;
-	s = (char *) malloc(j * sizeof(char) + 1);
+	s = (char *) malloc(k * sizeof(char) + 1);
+	if (s == NULL)
+		return (NULL);
 	j = 0;
 	while (l < k)
 	{
-		if (l <= k)
-			s[k] = s1[k];
-		if (l > i)
+		if (l < i)
+			s[l] = s1[l];
+		if (l >= i)
 		{
 			s[l] = s2[j];
 			j++;
