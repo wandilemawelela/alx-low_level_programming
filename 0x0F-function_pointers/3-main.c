@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	}
 	res = f(arg1, arg2);
 
-	printf("%d %c %d = %d\n", arg1, op, arg2, res);
+	printf("%d\n", res);
 
 	return (0);
 }
