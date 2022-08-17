@@ -2,7 +2,7 @@
 #define LIST_H
 
 /*
-* Desc: header file containinf prototypes and definitions
+* Desc: header file containing prototypes and definitions
 *	for all functions and types written in this proj
 */
 
