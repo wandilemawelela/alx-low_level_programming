@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[i] == '0' || b[i] == '1') /* while b[i] is 0 or 1, */
 	{
-		val << = 1; /* shift the value to the left by 1 */
+		val <<= 1; /* shift the value to the left by 1 */
 		val += b[i] - '0'; /* add the value of b[i] to the value */
 		i++;
 	}
