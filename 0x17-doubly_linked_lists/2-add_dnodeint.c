@@ -1,28 +1,6 @@
 #include "lists.h"
 
 /**
- * GetNewNode - Creates a new node from the heap
- * @x: Int value
- *
- * Return: Address of the new node
- *
- */
-
-struct dlistint_s *GetNewNode(int x)
-{
-	struct dlistint_s *newNode;
-
-	newNode = (struct dlistint_s *) malloc(sizeof(struct dlistint_s));
-
-	newNode->n = x;
-	newNode->prev = NULL;
-	newNode->next = NULL;
-
-	return (newNode);
-}
-
-
-/**
  * add_dnodeint - adds a new node at the beginning of a dlistint_t list.
  * @head: The head of the dlistint_t list.
  * @n: Data to add
@@ -33,17 +11,20 @@ struct dlistint_s *GetNewNode(int x)
 
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	struct dlistint_s *newNode = GetNewNode(n);
+	dlistint_t *new;
 
-	if (*head == NULL)
-	{
-		*head = newNode;
-		return (newNode);
-	}
+	new = malloc(sizeof(dlistint_t));
 
-	(*head)->prev = newNode;
-	newNode->next = *head;
-	*head = newNode;
+	if (new == NULL)
+		return (NULL);
 
-	return (newNode);
+	new->n = n;
+	new->prev = NULL;
+	new->next = *head;
+
+	if (*head != NULL)
+		(*head)->prev = new;
+	*head = new;
+
+	return (new);
 }
